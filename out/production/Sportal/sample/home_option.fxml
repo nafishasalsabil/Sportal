@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homeAnchorPane1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #35495E;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomeOptionController">
+   <children>
+      <Button fx:id="football_button" layoutX="2.0" layoutY="1.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+         <graphic>
+            <VBox alignment="CENTER" prefHeight="316.0" prefWidth="324.0" style="-fx-background-color: transparent;">
+               <children>
+                  <ImageView fitHeight="132.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/football_color.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="42.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="114.0" text="Football" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </graphic>
+      </Button>
+      <Button fx:id="cricket_button" layoutX="345.0" layoutY="1.0" mnemonicParsing="false" onAction="#inside_cricket" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+         <graphic>
+            <VBox alignment="CENTER" prefHeight="316.0" prefWidth="324.0">
+               <children>
+                  <ImageView fitHeight="132.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cricket.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="42.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="114.0" text="Cricket" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </graphic>
+      </Button>
+      <Button fx:id="basketballButton" layoutX="2.0" layoutY="363.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+         <graphic>
+            <VBox alignment="CENTER" prefHeight="363.0" prefWidth="302.0">
+               <children>
+                  <ImageView fitHeight="132.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/basketball-hoop.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="42.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="114.0" text="BasketBall" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </graphic>
+      </Button>
+      <Button fx:id="volleyballButton" layoutX="345.0" layoutY="363.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+         <graphic>
+            <VBox alignment="CENTER" spacing="12.0">
+               <children>
+                  <ImageView fitHeight="132.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/volleyballb.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="42.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="114.0" text="VolleyBall" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </graphic>
+      </Button>
+      <Button fx:id="badmintonButton" layoutX="689.0" layoutY="1.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+         <graphic>
+            <VBox alignment="CENTER" prefHeight="316.0" prefWidth="324.0">
+               <children>
+                  <ImageView fitHeight="132.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/badmintonb.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="42.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="121.0" text="Badminton" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </graphic>
+      </Button>
+      <Button fx:id="hockeyButton" layoutX="689.0" layoutY="363.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+         <graphic>
+            <VBox alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="132.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hockey.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="42.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="114.0" text="Hockey" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

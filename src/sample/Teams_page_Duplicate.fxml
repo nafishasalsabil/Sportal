@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="teamsAnchorpaneduplicate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TeamsPageDuplicateController">
+   <children>
+      <ListView fx:id="teams_listview" onMouseClicked="#team_name_clicked" prefHeight="630.0" prefWidth="1032.0" />
+   </children>
+</AnchorPane>

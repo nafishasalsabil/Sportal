@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="teamsAnchorPaneEach" prefHeight="630.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EachTeamDetailPageController">
+   <children>
+      <TableView fx:id="table_team" layoutX="3.0" layoutY="62.0" prefHeight="567.0" prefWidth="1046.0">
+        <columns>
+          <TableColumn fx:id="player_name" prefWidth="139.19998168945312" text="Player Name" />
+          <TableColumn fx:id="player_age" prefWidth="116.80001831054688" text="Age" />
+            <TableColumn fx:id="player_roll" prefWidth="137.60003662109375" text="Roll" />
+            <TableColumn fx:id="player_gender" prefWidth="130.39996337890625" text="Gender" />
+            <TableColumn fx:id="player_address" prefWidth="177.5999755859375" text="Address" />
+            <TableColumn fx:id="player_institution" prefWidth="162.40008544921875" text="Institution" />
+            <TableColumn fx:id="player_contact" prefWidth="175.2000732421875" text="Contact" />
+        </columns>
+      </TableView>
+      <Label fx:id="teamName_Label" alignment="CENTER" layoutX="365.0" layoutY="20.0" prefHeight="18.0" prefWidth="297.0" text="Team Name">
+         <font>
+            <Font name="Segoe UI Semibold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
