@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="520.0" style="-fx-background-color: #070417;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddPlayerToTeamDialogBoxController">
+   <children>
+      <Label alignment="CENTER" prefHeight="78.0" prefWidth="235.0" text="Add Player!" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="33.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="21.0" />
+         </VBox.margin>
+      </Label>
+      <HBox>
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+         <children>
+            <Label alignment="CENTER" text=" Name" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="67.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="playernamefield" prefHeight="26.0" prefWidth="303.0" style="-fx-background-color: #070417; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #30475E; -fx-alignment: center; -fx-text-fill: #ffffff;">
+               <HBox.margin>
+                  <Insets left="38.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER" text="Age" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="69.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="playeragefield" prefHeight="26.0" prefWidth="303.0" style="-fx-background-color: #070417; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #30475E; -fx-alignment: center; -fx-text-fill: #ffffff;">
+               <HBox.margin>
+                  <Insets left="49.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="4.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER" text="Roll" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="69.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="playerrollfield" prefHeight="26.0" prefWidth="303.0" style="-fx-background-color: #070417; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #30475E; -fx-alignment: center; -fx-text-fill: #ffffff;">
+               <HBox.margin>
+                  <Insets left="51.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="4.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER" text="Gender" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="68.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <RadioButton fx:id="male" mnemonicParsing="false" text="Male" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semilight" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="76.0" top="9.0" />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="female" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$gender">
+               <font>
+                  <Font name="Segoe UI Semilight" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="35.0" top="9.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="others" mnemonicParsing="false" text="Others" textFill="WHITE" toggleGroup="$gender">
+               <HBox.margin>
+                  <Insets left="35.0" top="9.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI Semilight" size="12.0" />
+               </font>
+            </RadioButton>
+         </children>
+         <VBox.margin>
+            <Insets top="4.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER" text="Address" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="67.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="playeraddressfield" prefHeight="26.0" prefWidth="303.0" style="-fx-background-color: #070417; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #30475E; -fx-alignment: center; -fx-text-fill: #ffffff;">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="4.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER" text="Institution" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="66.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="playerinstitutionfield" prefHeight="26.0" prefWidth="303.0" style="-fx-background-color: #070417; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #30475E; -fx-alignment: center; -fx-text-fill: #ffffff;">
+               <HBox.margin>
+                  <Insets left="17.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="4.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER" text="Contact" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="66.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="playercontactfield" prefHeight="26.0" prefWidth="303.0" style="-fx-background-color: #070417; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #30475E; -fx-alignment: center; -fx-text-fill: #ffffff;">
+               <HBox.margin>
+                  <Insets left="31.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="4.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER" text="Course" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="66.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="playercoursefield" prefHeight="26.0" prefWidth="303.0" style="-fx-background-color: #070417; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #30475E; -fx-alignment: center; -fx-text-fill: #ffffff;">
+               <HBox.margin>
+                  <Insets left="31.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Button fx:id="cancelplayerbutton" mnemonicParsing="false" onMouseClicked="#onPlayerCancelClicked" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #292639;" text="Cancel" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="63.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="addplayerbutton" mnemonicParsing="false" onMouseClicked="#addPlayerButtonClicked" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #292639;" text="Add" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="113.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="63.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

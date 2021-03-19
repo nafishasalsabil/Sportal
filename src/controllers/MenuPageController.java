@@ -154,4 +154,39 @@ Button football_button;
 
 
     }
+
+    public void inside_football(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Inside_Football_firstpage.fxml"));
+
+        menuAnchorPane.getChildren().setAll(pane);
+
+    }
+
+    public void insideBasketBall(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Inside_Basketball_firstpage.fxml"));
+
+        menuAnchorPane.getChildren().setAll(pane);
+
+    }
+
+    public void insideVolleyBall(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Inside_Volleyball_firstpage.fxml"));
+
+        menuAnchorPane.getChildren().setAll(pane);
+
+    }
+
+    public void insideBadminton(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Inside_Badminton_firstpage.fxml"));
+
+        menuAnchorPane.getChildren().setAll(pane);
+
+    }
+
+    public void insideHockey(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Inside_Hockey_firstpage.fxml"));
+
+        menuAnchorPane.getChildren().setAll(pane);
+
+    }
 }

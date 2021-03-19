@@ -72,7 +72,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/profile.png" />
+                                    <Image url="@../images/profile_fill.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="41.0" top="13.0" />
@@ -132,7 +132,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/exit.png" />
+                                    <Image url="@../images/logout.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="45.0" top="16.0" />
@@ -159,7 +159,7 @@
          <center>
             <AnchorPane fx:id="homeAnchorPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #35495E;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="football_button" layoutX="2.0" layoutY="1.0" mnemonicParsing="false" onMouseEntered="#footballHover" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+                  <Button fx:id="football_button" layoutX="2.0" layoutY="1.0" mnemonicParsing="false" onAction="#inside_football" onMouseEntered="#footballHover" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
                      <graphic>
                         <VBox alignment="CENTER" prefHeight="316.0" prefWidth="324.0" style="-fx-background-color: transparent;">
                            <children>
@@ -207,7 +207,7 @@
                         </VBox>
                      </graphic>
                   </Button>
-                  <Button fx:id="basketballButton" layoutX="2.0" layoutY="363.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+                  <Button fx:id="basketballButton" layoutX="2.0" layoutY="363.0" mnemonicParsing="false" onAction="#insideBasketBall" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
                      <graphic>
                         <VBox alignment="CENTER" prefHeight="363.0" prefWidth="302.0">
                            <children>
@@ -231,7 +231,7 @@
                         </VBox>
                      </graphic>
                   </Button>
-                  <Button fx:id="volleyballButton" layoutX="345.0" layoutY="363.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+                  <Button fx:id="volleyballButton" layoutX="345.0" layoutY="363.0" mnemonicParsing="false" onAction="#insideVolleyBall" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
                      <graphic>
                         <VBox alignment="CENTER" spacing="12.0">
                            <children>
@@ -258,7 +258,7 @@
                         </VBox>
                      </graphic>
                   </Button>
-                  <Button fx:id="badmintonButton" layoutX="689.0" layoutY="1.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+                  <Button fx:id="badmintonButton" layoutX="689.0" layoutY="1.0" mnemonicParsing="false" onAction="#insideBadminton" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
                      <graphic>
                         <VBox alignment="CENTER" prefHeight="316.0" prefWidth="324.0">
                            <children>
@@ -282,7 +282,7 @@
                         </VBox>
                      </graphic>
                   </Button>
-                  <Button fx:id="hockeyButton" layoutX="689.0" layoutY="363.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
+                  <Button fx:id="hockeyButton" layoutX="689.0" layoutY="363.0" mnemonicParsing="false" onAction="#insideHockey" prefHeight="358.0" prefWidth="341.0" style="-fx-background-color: #222831;" stylesheets="@MenuPage_Football.css">
                      <graphic>
                         <VBox alignment="CENTER">
                            <children>

@@ -2,9 +2,9 @@ package sample;
 
 public class Each_Team_Detail_Class {
     int player_age;
-    String player_name,player_roll,player_gender,player_address,player_institution,player_contact;
+    String player_name,player_roll,player_gender,player_address,player_institution,player_contact,player_course;
 
-    public Each_Team_Detail_Class(int player_age, String player_name, String player_roll, String player_gender, String player_address, String player_institution, String player_contact) {
+    public Each_Team_Detail_Class(int player_age, String player_name, String player_roll, String player_gender, String player_address, String player_institution, String player_contact, String player_course) {
         this.player_age = player_age;
         this.player_name = player_name;
         this.player_roll = player_roll;
@@ -12,6 +12,7 @@ public class Each_Team_Detail_Class {
         this.player_address = player_address;
         this.player_institution = player_institution;
         this.player_contact = player_contact;
+        this.player_course = player_course;
     }
 
     public int getPlayer_age() {
@@ -58,6 +59,14 @@ public class Each_Team_Detail_Class {
         return player_address;
     }
 
+    public String getPlayer_course() {
+        return player_course;
+    }
+
+    public void setPlayer_course(String player_course) {
+        this.player_course = player_course;
+    }
+
     public void setPlayer_address(String player_address) {
         this.player_address = player_address;
     }
@@ -69,4 +78,5 @@ public class Each_Team_Detail_Class {
     public void setPlayer_institution(String player_institution) {
         this.player_institution = player_institution;
     }
+
 }
