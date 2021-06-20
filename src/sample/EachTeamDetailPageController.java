@@ -174,8 +174,10 @@ public class EachTeamDetailPageController implements Initializable {
                     System.out.println("playerName:" +
                             resultSet.getString("player_age"));
 
+/*
                     each_team_detail_class = new Each_Team_Detail_Class(Integer.parseInt(resultSet.getString("player_age")), resultSet.getString("player_name"), resultSet.getString("player_course"), resultSet.getString("player_gender"), resultSet.getString("player_address"), resultSet.getString("instituition_id"), resultSet.getString("contact"), resultSet.getString("player_course"));
                     detail_list.add(each_team_detail_class);
+*/
 
                 }
 //                detail_list.addAll(each_team_detail_class);
@@ -444,8 +446,8 @@ public class EachTeamDetailPageController implements Initializable {
                     System.out.println("playerName:" +
                             resultSet.getString("player_age"));
 
-                    each_team_detail_class = new Each_Team_Detail_Class(Integer.parseInt(resultSet.getString("player_age")), resultSet.getString("player_name"), resultSet.getString("player_course"), resultSet.getString("player_gender"), resultSet.getString("player_address"), resultSet.getString("instituition_id"), resultSet.getString("contact"), resultSet.getString("player_course"));
-                    detail_list.add(each_team_detail_class);
+//                    each_team_detail_class = new Each_Team_Detail_Class(Integer.parseInt(resultSet.getString("player_age")), resultSet.getString("player_name"), resultSet.getString("player_course"), resultSet.getString("player_gender"), resultSet.getString("player_address"), resultSet.getString("instituition_id"), resultSet.getString("contact"), resultSet.getString("player_course"));
+//                    detail_list.add(each_team_detail_class);
 
 
                 }

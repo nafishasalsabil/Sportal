@@ -130,8 +130,10 @@ public class AddPlayerToTeamDialogBoxController {
 
 
                 stmt.executeUpdate();
+/*
                 Each_Team_Detail_Class each_team_detail_class = new Each_Team_Detail_Class(Integer.parseInt(age),name1,course,gender_string,address,inst,contact,course);
                 reload(each_team_detail_class);
+*/
 
 
 /*

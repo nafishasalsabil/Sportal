@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AvailableTeamForTournamentCricketController">
+   <children>
+      <ListView fx:id="available_team_list" layoutY="52.0" onMouseClicked="#selectedteams" prefHeight="282.0" prefWidth="400.0" stylesheets="@available_teams_Listview.css" />
+      <Label alignment="CENTER" layoutX="100.0" layoutY="20.0" prefHeight="18.0" prefWidth="198.0" text="SELECT TEAMS FOR TOURNAMENT" />
+      <Button fx:id="done_adding" layoutX="92.0" layoutY="351.0" mnemonicParsing="false" onAction="#onDonePressed" prefHeight="26.0" prefWidth="216.0" style="-fx-background-color: #BD9354;" text="DONE" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -54,6 +54,7 @@ public class InsideBadmintonFirstpageController implements Initializable {
     @FXML
     private ListView<String> badmintonteamlistView;
     ObservableList<String> list2 = FXCollections.observableArrayList();
+    public static int id_player;
     @FXML
     void obNavigationBackClicked(MouseEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/menu_page.fxml"));
@@ -68,9 +69,9 @@ public class InsideBadmintonFirstpageController implements Initializable {
 
         teamsAnchorPane.getChildren().setAll(pane);*/
         TeamNameClass teamNameClass = new TeamNameClass();
-        EachTeamDetailPageController eachTeamDetailPageController = new EachTeamDetailPageController();
+        TennisPlayerProfileController eachTeamDetailPageController = new TennisPlayerProfileController();
         eachTeamDetailPageController.teamname(badmintonteamlistView.getSelectionModel().getSelectedItem());
-        loadpage("Each_Team_Detail_Page");
+        loadpage("TennisPlayerProfile");
 
 
     }
@@ -96,7 +97,7 @@ public class InsideBadmintonFirstpageController implements Initializable {
 
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement
-                    .executeQuery("select team_name FROM team where sport_id=3;");
+                    .executeQuery("SELECT players.player_name FROM players WHERE players.sport_id = 4;");
 
 
             while (resultSet.next()) {
@@ -107,6 +108,7 @@ public class InsideBadmintonFirstpageController implements Initializable {
 
                 list2.add(resultSet.getString(1));
                 System.out.println(resultSet.getString(1));
+//                id_player=resultSet.getInt("player_id");
 
             }
             //  detail_list.addAll(each_team_detail_class);
@@ -139,7 +141,7 @@ public class InsideBadmintonFirstpageController implements Initializable {
 
     }
 
-    @FXML
+ /*   @FXML
     void schedule_button_clicked(MouseEvent event) {
         loadpage("Schedule_Page");
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
@@ -147,7 +149,7 @@ public class InsideBadmintonFirstpageController implements Initializable {
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
         venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
 
-    }
+    }*/
 
     @FXML
     void teams_button_clicked(MouseEvent event) {
@@ -155,23 +157,23 @@ public class InsideBadmintonFirstpageController implements Initializable {
         badmintonteamlistView.setItems(list2);
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
-        schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
-        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
+       /* schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
+        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");*/
 
     }
 
     @FXML
     void tournamments_button_clicked(MouseEvent event) {
-        loadpage("Tournaments_Page");
+        loadpage("Tennis_Standings");
 
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
-        schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
+       /* schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
         venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
-
+*/
     }
 
-    @FXML
+    /*@FXML
     void venues_button_clicked(MouseEvent event) {
         loadpage("Venues_Page");
 
@@ -180,6 +182,6 @@ public class InsideBadmintonFirstpageController implements Initializable {
         schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
 
-    }
+    }*/
 
 }

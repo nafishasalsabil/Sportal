@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.VenueController">
+   <children>
+      <TableView fx:id="venue_table" layoutX="27.0" layoutY="87.0" prefHeight="472.0" prefWidth="978.0">
+        <columns>
+          <TableColumn fx:id="place_column" prefWidth="203.19998741149902" text="Place" />
+          <TableColumn fx:id="matches_played_column" prefWidth="227.20004272460938" text="Matches Played" />
+            <TableColumn fx:id="tournaments_payed_column" prefWidth="278.3999328613281" text="Tournaments Played" />
+            <TableColumn fx:id="goals_scored_column" prefWidth="355.199951171875" text="Goals Scored" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="401.0" layoutY="24.0" prefHeight="26.0" prefWidth="230.0" text="Venues">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -54,7 +54,7 @@ public class TeamsPageController implements Initializable {
     private Button add_team_button;
     @FXML
     private AnchorPane teamsAnchorPane;
-public static String team_name="";
+    public static String team_name="";
 
 
     TeamNameClass teamNameClass;
@@ -102,13 +102,13 @@ public static String team_name="";
 
         teamsAnchorPane.getChildren().setAll(pane);*/
             TeamNameClass teamNameClass = new TeamNameClass();
-            EachTeamDetailPageController eachTeamDetailPageController = new EachTeamDetailPageController();
+            EachTeamDetailPageForCricketController eachTeamDetailPageController = new EachTeamDetailPageForCricketController();
             eachTeamDetailPageController.teamname(teams_listview.getSelectionModel().getSelectedItem());
 /*
         eachTeamDetailPageController.setTeamname(teams_listview.getSelectionModel().getSelectedItem());
 */
 
-        loadpage("Each_Team_Detail_Page");
+        loadpage("Each_Team_Detail_Page_For_Cricket");
     }
     private void loadpage(String page) {
         Parent root = null;
@@ -120,18 +120,18 @@ public static String team_name="";
         borderpaneCricket.setCenter(root);
     }
 
-    public void venues_button_clicked(MouseEvent mouseEvent) {
+  /*  public void venues_button_clicked(MouseEvent mouseEvent) {
         loadpage("Venues_Page");
         add_team_button.setVisible(false);
 
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
-        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
+//        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
         schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
 
-    }
+    }*/
 
-    public void schedule_button_clicked(MouseEvent mouseEvent) {
+   /* public void schedule_button_clicked(MouseEvent mouseEvent) {
         loadpage("Schedule_Page");
         add_team_button.setVisible(false);
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
@@ -139,7 +139,7 @@ public static String team_name="";
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
         venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
 
-    }
+    }*/
 
     public void teams_button_clicked(MouseEvent mouseEvent) {
         borderpaneCricket.setCenter(teamsAnchorpane);
@@ -147,19 +147,19 @@ public static String team_name="";
         add_team_button.setVisible(true);
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
-        schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
-        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
+//        schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
+//        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
 
     }
 
     public void tournament_button_clicked(MouseEvent mouseEvent) {
-        loadpage("Tournaments_Page");
+        loadpage("Tournaments_Page_Cricket");
         add_team_button.setVisible(false);
 
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
-        schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
-        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
+//        schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
+//        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
     }
 
     public void obNavigationBackClicked(MouseEvent mouseEvent) throws IOException {

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="teamsAnchorPaneEach" minWidth="-Infinity" prefHeight="720.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EachTeamMatchesFootballController">
+   <children>
+      <VBox fx:id="teamVbox" prefHeight="720.0" prefWidth="1032.0">
+         <children>
+            <TextField fx:id="search_textfield" disable="true" prefHeight="26.0" prefWidth="1012.0" promptText="Search player by Name">
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="teamName_Label" alignment="CENTER" prefHeight="18.0" prefWidth="1032.0" style="-fx-background-color: #30475E;" text="Team Name" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <HBox maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="1032.0">
+               <children>
+                  <Button fx:id="squad_button" mnemonicParsing="false" onAction="#squad_pressed" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: #000000;" stylesheets="@button.css" text="SQUAD">
+                     <HBox.margin>
+                        <Insets left="40.0" top="17.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="matches_button" mnemonicParsing="false" onAction="#matches_pressed" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #383E56; -fx-border-color: #000000;" stylesheets="@button.css" text="MATCHES" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" top="17.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="standings_button" mnemonicParsing="false" onAction="#standings_pressed" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: #000000;" stylesheets="@button.css" text="STANDINGS">
+                     <HBox.margin>
+                        <Insets left="20.0" top="17.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <ComboBox fx:id="tournament_combobox" onAction="#select_tournament" prefHeight="50.0" prefWidth="1032.0" stylesheets="@combobox.css" />
+                  <TableView fx:id="matches_table" prefHeight="521.0" prefWidth="1032.0" stylesheets="@tableview.css">
+                    <columns>
+                      <TableColumn fx:id="timecolumn" prefWidth="192.79998475313187" text="Time" />
+                      <TableColumn fx:id="teamAcolumn" minWidth="0.0" prefWidth="231.1999969482422" text="teamA" />
+                        <TableColumn fx:id="goalAcolumn" prefWidth="128.800048828125" text="goalA" />
+                        <TableColumn fx:id="hyphencolumn" prefWidth="107.199951171875" text="hyphen" />
+                        <TableColumn fx:id="goalBcolumn" prefWidth="110.40008544921875" text="goalB" />
+                        <TableColumn fx:id="teamBcolumn" prefWidth="262.4000244140625" text="teamB" />
+                    </columns>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets top="27.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

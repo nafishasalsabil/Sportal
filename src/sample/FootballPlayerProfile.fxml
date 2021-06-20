@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FootballPlayerProfileController">
+   <children>
+      <Label alignment="CENTER" layoutX="320.0" layoutY="300.0" prefHeight="54.0" prefWidth="346.0" text="STATS OVERVIEW" textFill="#070417">
+         <font>
+            <Font name="Leelawadee UI Semilight" size="30.0" />
+         </font>
+      </Label>
+      <HBox fx:id="profile_hbox" prefHeight="280.0" prefWidth="1032.0">
+         <children>
+            <VBox prefHeight="280.0" prefWidth="496.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/soccerjersey.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="32.0" top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label fx:id="player_name_label" alignment="CENTER" prefHeight="36.0" prefWidth="166.0" text="Player Name" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="6.0" top="17.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="player_position_label" alignment="CENTER" prefHeight="36.0" prefWidth="166.0" text="Player Position" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="6.0" top="3.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Semilight" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="age_label" alignment="CENTER" prefHeight="46.0" prefWidth="130.0" text="Age" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="height_label" alignment="CENTER" prefHeight="46.0" prefWidth="130.0" text="Height" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="weight_label" alignment="CENTER" prefHeight="46.0" prefWidth="130.0" text="Weight" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="jersey_number" alignment="CENTER" prefHeight="222.0" prefWidth="254.0" text="10" textFill="#f05454">
+               <font>
+                  <Font size="180.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="280.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="player_stats_table" layoutY="375.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="1032.0" stylesheets="@tableview_standings.css">
+        <columns>
+          <TableColumn fx:id="competition_column" prefWidth="154.3999908566475" text="Competition" />
+            <TableColumn fx:id="goals_column" prefWidth="66.4000244140625">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/goals.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="assists_column" prefWidth="66.39997863769531">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hitting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="yellow_card_column" prefWidth="76.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/yellowcard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="red_card_column" prefWidth="86.4000244140625">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/redcard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="starting_11_column" prefWidth="136.0" text="Starting 11" />
+            <TableColumn fx:id="substitution_on_column" prefWidth="113.5999755859375">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/uparrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="substitution_off_column" prefWidth="112.00006103515625">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/downarrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="clean_sheet_column" prefWidth="216.7999267578125" text="Clean Sheet" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

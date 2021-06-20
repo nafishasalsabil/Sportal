@@ -28,14 +28,14 @@
                                     <Image url="@../images/title.PNG" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" layoutX="65.0" layoutY="70.0" prefHeight="24.0" prefWidth="89.0" text="Football" textFill="WHITE">
+                              <Label alignment="CENTER" layoutX="65.0" layoutY="70.0" prefHeight="24.0" prefWidth="89.0" text="Tennis" textFill="WHITE">
                                  <font>
                                     <Font name="Segoe UI Semilight" size="18.0" />
                                  </font>
                               </Label>
                            </children>
                         </Pane>
-                        <Button fx:id="teams_button1" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#teams_button_clicked" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #ffffff; -fx-border-color: #BD9354; -fx-border-width: 0px 0px 4px 0px;" text="Teams">
+                        <Button fx:id="teams_button1" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#teams_button_clicked" prefHeight="50.0" prefWidth="484.0" style="-fx-background-color: #ffffff; -fx-border-color: #BD9354; -fx-border-width: 0px 0px 4px 0px;" text="Players">
                            <font>
                               <Font name="Segoe UI Semibold" size="18.0" />
                            </font>
@@ -43,28 +43,12 @@
                               <Insets top="39.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="tournaments_button_teams1" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#tournamments_button_clicked" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #ffffff; -fx-border-color: #DDDDDD; -fx-border-width: 0px 0px 4px 0px;" text="Tournaments">
+                        <Button fx:id="tournaments_button_teams1" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#tournamments_button_clicked" prefHeight="50.0" prefWidth="508.0" style="-fx-background-color: #ffffff; -fx-border-color: #DDDDDD; -fx-border-width: 0px 0px 4px 0px;" text="Standings">
                            <font>
                               <Font name="Segoe UI Semibold" size="18.0" />
                            </font>
                            <HBox.margin>
                               <Insets left="32.0" top="39.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="venues_button_teams1" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#venues_button_clicked" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #ffffff; -fx-border-color: #DDDDDD; -fx-border-width: 0px 0px 4px 0px;" text="Venues">
-                           <font>
-                              <Font name="Segoe UI Semibold" size="18.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="32.0" top="39.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="schedule_button_teams1" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#schedule_button_clicked" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #ffffff; -fx-border-color: #DDDDDD; -fx-border-width: 0px 0px 4px 0px;" text="Schedule">
-                           <font>
-                              <Font name="Segoe UI Semibold" size="18.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="48.0" top="39.0" />
                            </HBox.margin>
                         </Button>
                      </children>
@@ -96,16 +80,7 @@
          <center>
             <AnchorPane fx:id="teamsAnchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="1032.0" BorderPane.alignment="CENTER">
                <children>
-                  <ListView fx:id="badmintonteamlistView" onMouseClicked="#onBadmintonTeamNameClicked" prefHeight="630.0" prefWidth="1032.0" stylesheets="@Cricket_Listview.css" />
-                  <Button fx:id="add_team_button1" layoutX="941.0" layoutY="552.0" mnemonicParsing="false" onMouseClicked="#forAddingTeam" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="39.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/plus.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
+                  <ListView fx:id="badmintonteamlistView" onMouseClicked="#onBadmintonTeamNameClicked" prefHeight="630.0" prefWidth="1032.0" stylesheets="@Football_Player_Listview.css" />
                </children></AnchorPane>
          </center>
       </BorderPane>

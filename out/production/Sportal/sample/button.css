@@ -1,0 +1,16 @@
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: #000000;
+}
+
+
+.button:hover{
+
+    -fx-border-color: #383E56;
+    -fx-background-insets: 0;
+
+
+}
+.button:selected{
+    -fx-background-color: black;
+}

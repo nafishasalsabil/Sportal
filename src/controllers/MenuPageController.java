@@ -88,18 +88,18 @@ Button football_button;
 
     }
 
-    public void onProfileButtonClicked(ActionEvent actionEvent) throws IOException {
-/*
+   /* public void onProfileButtonClicked(ActionEvent actionEvent) throws IOException {
+*//*
         AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/profile_option.fxml"));
 
         homeAnchorPane.getChildren().setAll(pane);
-*/
+*//*
         profileButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #ffffff; ");
         homeButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #30475E; ");
         settingsButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #30475E; ");
         logoutButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #30475E; ");
 
-    }
+    }*/
 
     public void onHomeButtonClicked(ActionEvent actionEvent) throws IOException {
 /*
@@ -109,10 +109,10 @@ Button football_button;
 */
     //    loadpage("home_option");
         homeButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #ffffff; ");
-        profileButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #30475E; ");
+        /*profileButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #30475E; ");
         settingsButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #30475E; ");
         logoutButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #30475E; ");
-
+*/
     }
 
     private void loadpage(String page) {
@@ -135,7 +135,7 @@ Button football_button;
 
     }
 
-    public void settingsClicked(MouseEvent mouseEvent) {
+  /*  public void settingsClicked(MouseEvent mouseEvent) {
         loadpage("settings_option");
         settingsButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #ffffff; ");
         profileButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #30475E; ");
@@ -153,7 +153,7 @@ Button football_button;
         homeButton.setStyle("-fx-border-width:   0px 0px 0px 2px; -fx-border-color: #30475E; ");
 
 
-    }
+    }*/
 
     public void inside_football(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Inside_Football_firstpage.fxml"));
@@ -162,7 +162,7 @@ Button football_button;
 
     }
 
-    public void insideBasketBall(ActionEvent actionEvent) throws IOException {
+    /*public void insideBasketBall(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Inside_Basketball_firstpage.fxml"));
 
         menuAnchorPane.getChildren().setAll(pane);
@@ -174,7 +174,7 @@ Button football_button;
 
         menuAnchorPane.getChildren().setAll(pane);
 
-    }
+    }*/
 
     public void insideBadminton(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Inside_Badminton_firstpage.fxml"));

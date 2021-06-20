@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.util.Optional;
 
 public class AddFootballTeamDialogBoxController {
 
@@ -43,10 +44,13 @@ public class AddFootballTeamDialogBoxController {
     public static String coach="";
     public static String instname="";
     public static String instid="";
+    Optional<String> returnValue;
+
 
     @FXML
     void addButtonClicked(MouseEvent event) {
         name1 = teamnamefield.getText().toString();
+        returnValue = Optional.of(teamnamefield.getText());
 
         TeamNameClass teamNameClass = new TeamNameClass();
 
@@ -119,5 +123,8 @@ public class AddFootballTeamDialogBoxController {
         stage.close();
 
     }
-
+    public Optional<String> getNewItem()
+    {
+        return returnValue;
+    }
 }

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addtournamentanchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddTournamentsPageCricketController">
+   <children>
+      <ImageView fitHeight="131.0" fitWidth="138.0" layoutX="460.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/playoff.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="354.0" layoutY="166.0" prefHeight="18.0" prefWidth="368.0" text="START A TOURNAMENT">
+         <font>
+            <Font name="Segoe UI Semibold" size="26.0" />
+         </font>
+      </Label>
+      <HBox layoutX="107.0" layoutY="244.0" prefHeight="55.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="26.0" prefWidth="130.0" text="Tournament title">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="6.0" top="11.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tournament_title_field" prefHeight="26.0" prefWidth="500.0" promptText="Type here a title!" style="-fx-background-color: transparent; -fx-border-color: #BD9354; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="122.0" top="6.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="107.0" layoutY="386.0" prefHeight="55.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="26.0" prefWidth="261.0" text="When is the tournament starting?">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="11.0" />
+               </HBox.margin>
+            </Label>
+            <DatePicker fx:id="tournament_datepicker" prefHeight="26.0" prefWidth="500.0" promptText="Select a date" style="-fx-background-color: #f4f4f4; -fx-border-color: #BD9354; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets top="11.0" />
+               </HBox.margin>
+            </DatePicker>
+         </children>
+      </HBox>
+      <HBox layoutX="116.0" layoutY="315.0" prefHeight="55.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="26.0" prefWidth="250.0" text="What type of tounament is this?">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="11.0" />
+               </HBox.margin>
+            </Label>
+            <RadioButton fx:id="league_radio" mnemonicParsing="false" text="League">
+               <HBox.margin>
+                  <Insets left="26.0" top="14.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI Semilight" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tournament_type_group" />
+               </toggleGroup>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox layoutX="107.0" layoutY="455.0" prefHeight="55.0" prefWidth="800.0">
+         <children>
+            <Label prefHeight="26.0" prefWidth="288.0" text=" Select teams here">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="6.0" top="11.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="available_teams_button" mnemonicParsing="false" onAction="#seeavailableteams" prefHeight="26.0" prefWidth="500.0" style="-fx-background-color: #BD9354;" text="Click to see available teams" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="-32.0" top="13.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="cancel_button" layoutX="603.0" layoutY="560.0" mnemonicParsing="false" onAction="#cancel_clicked" prefHeight="40.0" prefWidth="238.0" style="-fx-background-color: #BD9354;" text="Cancel" textFill="WHITE" />
+      <Button fx:id="create_tournament_button" layoutX="196.0" layoutY="560.0" mnemonicParsing="false" onAction="#tournament_create_clicked" prefHeight="40.0" prefWidth="238.0" style="-fx-background-color: #BD9354;" text="Create" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="630.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TennisStandingsController">
+   <children>
+      <TableView fx:id="stat_table" layoutX="9.0" layoutY="29.0" prefHeight="586.0" prefWidth="1017.0" stylesheets="@tableview_standings.css">
+        <columns>
+          <TableColumn fx:id="team_col" prefWidth="203.19998455047607" text="Team" />
+          <TableColumn fx:id="played_col" minWidth="0.0" prefWidth="196.8000030517578" text="Played" />
+            <TableColumn fx:id="won_col" prefWidth="208.0" text="Won" />
+            <TableColumn fx:id="lost_col" prefWidth="192.0" text="Lost" />
+            <TableColumn fx:id="pts_col" prefWidth="217.60009765625" text="PTS" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

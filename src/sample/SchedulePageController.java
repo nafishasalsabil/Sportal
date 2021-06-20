@@ -9,35 +9,59 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
 public class SchedulePageController {
-    @FXML
-    Button teams_button_schedule;
-    @FXML
-    Button venues_button_schedule;
-    @FXML
-    Button tournaments_button_schedule;
-
 
     @FXML
     private AnchorPane scheduleAnchorPane;
 
-    public void teams_button_schedule_action(ActionEvent actionEvent) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Teams_Page.fxml"));
+    @FXML
+    private Button player_ranking;
+
+    @FXML
+    private Button referee;
+
+    @FXML
+    private Button venue;
+
+    @FXML
+    private Button institution;
+
+    @FXML
+    private Button booking_info;
+
+    @FXML
+    void booking_info_pressed(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Booking_Info.fxml"));
 
         scheduleAnchorPane.getChildren().setAll(pane);
-
     }
 
-    public void tournaments_button_schedule_action(ActionEvent actionEvent) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Tournaments_Page.fxml"));
+    @FXML
+    void institution_pressed(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Institution.fxml"));
 
         scheduleAnchorPane.getChildren().setAll(pane);
-
     }
 
-    public void venues_button_schedule_action(ActionEvent actionEvent) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Venues_Page.fxml"));
+    @FXML
+    void player_ranking_pressed(ActionEvent event) throws IOException {
+
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Player_Ranking.fxml"));
 
         scheduleAnchorPane.getChildren().setAll(pane);
-
     }
+
+    @FXML
+    void referee_pressed(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Referee.fxml"));
+
+        scheduleAnchorPane.getChildren().setAll(pane);
+    }
+
+    @FXML
+    void venue_pressed(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Venue.fxml"));
+
+        scheduleAnchorPane.getChildren().setAll(pane);
+    }
+
 }

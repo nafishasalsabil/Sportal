@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -21,6 +22,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -103,13 +105,26 @@ public class InsideFootballFirstpageController implements Initializable {
 
     public void forAddingTeam(MouseEvent mouseEvent) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("sample/AddFootballTeamDialogBox.fxml"));
+          /*  Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("sample/AddFootballTeamDialogBox.fxml"));
             Scene scene = new Scene(parent);
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.initStyle(StageStyle.UTILITY);
-            stage.show();
-        } catch (IOException ex) {
+            stage.show();*/
+            FXMLLoader addNewItemLoader = new FXMLLoader(getClass().getClassLoader().getResource("sample/AddFootballTeamDialogBox.fxml"));
+            Stage secondStage = new Stage();
+            secondStage.setScene(new Scene(addNewItemLoader.load()));
+            AddFootballTeamDialogBoxController addFootballTeamDialogBoxController = addNewItemLoader.getController();
+            secondStage.showAndWait();
+
+            Optional<String> result = addFootballTeamDialogBoxController.getNewItem();
+            if (result.isPresent()) {
+                System.out.println("Your name: " + result.get());
+                list1.add(result.get());
+                footballteamlist.setItems(list1);
+            }
+
+            } catch (IOException ex) {
             Logger.getLogger(TeamsPageController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -128,15 +143,25 @@ public class InsideFootballFirstpageController implements Initializable {
         borderpaneCricket.setCenter(root);
     }
 
-    public void teamnameclicked(MouseEvent mouseEvent) {
+    public void teamnameclicked(MouseEvent mouseEvent) throws IOException {
         System.out.println("clicked on " + footballteamlist.getSelectionModel().getSelectedItem());
       /*  AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Each_Team_Detail_Page.fxml"));
 
         teamsAnchorPane.getChildren().setAll(pane);*/
-        TeamNameClass teamNameClass = new TeamNameClass();
-        EachTeamDetailPageController eachTeamDetailPageController = new EachTeamDetailPageController();
+        EachTeamDetailPageForFootballController eachTeamDetailPageController = new EachTeamDetailPageForFootballController();
         eachTeamDetailPageController.teamname(footballteamlist.getSelectionModel().getSelectedItem());
-        loadpage("Each_Team_Detail_Page");
+        loadpage("Each_Team_Detail_Page_For_Football");
+/*
+        Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Each_Team_Detail_Page_For_Football.fxml"));
+        Scene tableViewScene = new Scene(parent);
+
+        //This line gets the Stage information
+        Stage window = (Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
+*/
+
 
     }
 
@@ -147,7 +172,6 @@ public class InsideFootballFirstpageController implements Initializable {
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
         schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
-        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
 
     }
 
@@ -158,7 +182,6 @@ public class InsideFootballFirstpageController implements Initializable {
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
         schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
-        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
 
     }
 
@@ -168,7 +191,6 @@ public class InsideFootballFirstpageController implements Initializable {
         add_team_button1.setVisible(false);
 
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
-        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
         schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
 
@@ -180,7 +202,6 @@ public class InsideFootballFirstpageController implements Initializable {
         teams_button1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD; -fx-background-color: #ffffff; ");
         schedule_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #BD9354;-fx-background-color: #ffffff; ");
         tournaments_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
-        venues_button_teams1.setStyle("-fx-border-width:    0px 0px 4px 0px; -fx-border-color: #DDDDDD;-fx-background-color: #ffffff; ");
 
     }
 }

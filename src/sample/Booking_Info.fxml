@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BookingInfoController">
+   <children>
+      <TableView fx:id="book_table" layoutX="27.0" layoutY="87.0" prefHeight="472.0" prefWidth="978.0">
+         <columns>
+            <TableColumn fx:id="name_column" prefWidth="183.9999656677246" text="Player" />
+            <TableColumn fx:id="no_of_teams_column" prefWidth="210.40003967285156" text="Team" />
+            <TableColumn fx:id="inst" prefWidth="166.4000244140625" text="Institution" />
+            <TableColumn fx:id="booked" prefWidth="135.99993896484375" text="No. of Booked" />
+            <TableColumn fx:id="yellow" prefWidth="125.5999755859375" text="Yellow Card" />
+            <TableColumn fx:id="red" prefWidth="155.19989013671875" text="Red Card" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="401.0" layoutY="24.0" prefHeight="26.0" prefWidth="230.0" text="Booking Info">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
